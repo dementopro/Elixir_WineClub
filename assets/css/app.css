@@ -1,3 +1,18 @@
+/* SCOTT */
+/* Import tailwind - with postcss-import installed */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* custom styles - put after base imports! */
+@import "./default-styles.css";
+/* import custom components */
+/*  SCOTT TODO @import "./components/buttons.css"; */
+/* default phoenix styles - eventually remove */
+@import "./phoenix.css";
+
+
+/* END SCOTT TAILWIND */
 /* This file is for your main application CSS */
 @import "./phoenix.css";
 
