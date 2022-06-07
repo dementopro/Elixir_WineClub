@@ -19,7 +19,9 @@
 //     import "some-package"
 //
 //SCOTT START
-import Alpine from "alpinejs";
+//import Alpine from "alpinejs";
+//import Alpine from "alpinejs"
+//import "alpinejs"
 // SCOTT END
 
 // Include phoenix_html to handle method=PUT/DELETE in forms and buttons.

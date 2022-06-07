@@ -5,13 +5,13 @@ import Config
 # The MIX_TEST_PARTITION environment variable can be used
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
-config :alzhmr_photo, AlzhmrPhoto.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "alzhmr_photo_test#{System.get_env("MIX_TEST_PARTITION")}",
-  pool: Ecto.Adapters.SQL.Sandbox,
-  pool_size: 10
+# SCOTT config :alzhmr_photo, AlzhmrPhoto.Repo,
+ # SCOTT username: "postgres",
+ # SCOTT password: "postgres",
+ # SCOTT hostname: "localhost",
+ # SCOTT database: "alzhmr_photo_test#{System.get_env("MIX_TEST_PARTITION")}",
+ # SCOTT pool: Ecto.Adapters.SQL.Sandbox,
+ # SCOTT pool_size: 10
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.

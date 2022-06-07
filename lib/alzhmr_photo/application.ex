@@ -9,11 +9,15 @@ defmodule AlzhmrPhoto.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      AlzhmrPhoto.Repo,
+       # AlzhmrPhoto.Repo,
       # Start the Telemetry supervisor
       AlzhmrPhotoWeb.Telemetry,
       # Start the PubSub system
       {Phoenix.PubSub, name: AlzhmrPhoto.PubSub},
+
+      # Start cache processes
+      AlzhmrPhoto.Article.Cache,
+      AlzhmrPhoto.Content.Cache,
       # Start the Endpoint (http/https)
       AlzhmrPhotoWeb.Endpoint
       # Start a worker by calling: AlzhmrPhoto.Worker.start_link(arg)
