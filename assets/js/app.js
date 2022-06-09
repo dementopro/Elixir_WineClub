@@ -1,7 +1,6 @@
 // We import the CSS which is extracted to its own file by esbuild.
 // Remove this line if you add a your own CSS build pipeline (e.g postcss).
-// SCOTT comment import "../css/app.css"
-
+// SCOTT comment 
 // If you want to use Phoenix channels, run `mix help phx.gen.channel`
 // to get started and then uncomment the line below.
 // import "./user_socket.js"
@@ -20,6 +19,7 @@
 //
 //SCOTT START
 //import Alpine from "alpinejs";
+// scott import Alpine from "alpinejs"
 //import Alpine from "alpinejs"
 //import "alpinejs"
 // SCOTT END
@@ -34,8 +34,8 @@ import topbar from "../vendor/topbar"
 // comment by scott let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 // coommnet scott let liveSocket = new LiveSocket("/live", Socket, {params: {_csrf_token: csrfToken}})
 //SCOTT NEW ALPINEa
-window.Alpine = Alpine;
-Alpine.start();
+// SCOTT indow.Alpine = Alpine;
+// scott Alpine.start();
 let hooks = {};
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket("/live", Socket, {

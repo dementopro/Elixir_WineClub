@@ -1,22 +1,32 @@
 /* SCOTT */
 /* Import tailwind - with postcss-import installed */
-@import "tailwindcss/base";
+/* WAS @import "tailwindcss/base"; 
 @import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss/utilities";*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* custom styles - put after base imports! */
 @import "./default-styles.css";
 /* import custom components */
-@import "./components/buttonscott.css";
+/* @import "./components/buttonscott.css"; MPT WORKING  DIRECTORY ISSUE? */
 /*  SCOTT TODO @import "./components/buttons.css"; */
 /* default phoenix styles - eventually remove */
-@import "./phoenix.css";
+
+@import "./buttonscott2.css";
+
 
 
 /* END SCOTT TAILWIND */
 /* This file is for your main application CSS */
 @import "./phoenix.css";
 
+@layer components {
+  .btn-scott {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg;
+  }
+}
 /* Alerts and form errors used by phx.new */
 .alert {
   padding: 15px;
