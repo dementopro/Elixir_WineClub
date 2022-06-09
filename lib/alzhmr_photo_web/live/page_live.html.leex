@@ -1,0 +1,11 @@
+<%= if @contents  do %>
+   <%=#  for content <- @contents, do: render_section(content) %>
+
+  <%= render_section(List.first(@contents))  %>
+  <%= render_section(List.last(@contents))  %>
+  <% others= Enum.drop(@contents, -1)    %>
+  <%=  for content <- Enum.drop(others,1), do: render_section(content) %>
+  <%=# render_section( Enum.drop(others,1) )  %>
+
+
+<% end %>

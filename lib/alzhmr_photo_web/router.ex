@@ -16,8 +16,12 @@ defmodule AlzhmrPhotoWeb.Router do
 
   scope "/", AlzhmrPhotoWeb do
     pipe_through :browser
+    live "/", PageLive
+    live "/articles", ArticlesLive
 
-    get "/", PageController, :index
+    live "/articles/:id/:slug", ShowArticleLive
+
+    # SCOTT get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
