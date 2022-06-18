@@ -3,7 +3,7 @@
 ##SCOTT ADDITIONS
 https://btihen.me/post_elixir_phoenix/phoenix_1_6_petal_setup_with_asdf/
 add credo to mix deps: {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
-
+another testk
 See https://andrewbarr.io/posts/removing-npm/show
 
 To start your Phoenix server:
