@@ -1,16 +1,7 @@
 <%= if @articles  do %>
   <section class="section">
     <div class="container">
-      <header class="mb-6"><h2 class="title">Wine Detail</h2></header>
-      <div class="columns is-variable is-multiline is-mobile is-8">
-         <div class="column is-two-thirds"> </div>
-         <div class="column"><p>Search here... soon! </p>
-            <form phx-change="suggest" phx-submit="search">
-                <input type="text" name="q" value="" placeholder="Search wines" />
-                <button type="submit" phx-disable-with="Searching...">Search</button>
-            </form>
-         </div>
-      </div>
+      <header class="mb-6"><h2 class="title">slug: </h2></header>
       <div class="columns is-multiline">
         <%= for {article, counter } <- Enum.with_index(@articles)  , do: render_article(@socket, article, counter ) %>
       </div>

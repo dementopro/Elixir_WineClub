@@ -1,0 +1,23 @@
+<%= live_patch to: Routes.live_path(@socket, AlzhmrPhotoWeb.ShowArticleLive, @article.id, @article.slug), class: "column is-one-quarter article-list__article" do %>
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          <%= @article.title %>
+        </p>
+      </header>
+      <div class="card-image">
+        <figure class="image is-128x128">
+          <img class="article__image" src="<%= @article.image %>">
+        </figure>
+      </div>
+
+      <div class="card-content">
+        <div class="content">
+          <h3 class="title is-4"><%= @article.title %>  </h3>
+
+          <h4 class="subtitle is-6"><%= @article.description %></h4>
+        </div>
+       </div> <%= # end card-content %>
+     </div> <%= # end card %>
+
+<% end %>

@@ -5,14 +5,14 @@ defmodule AlzhmrPhotoWeb.PageLive do
 
   @topic "contents"
 
-  @impl true
+  @impl  Phoenix.LiveView
   def mount(_params, _session, socket) do
     AlzhmrPhotoWeb.Endpoint.subscribe(@topic)
 
     {:ok, assign_socket(socket), temporary_assigns: [contents: []]}
   end
 
-  @impl true
+  @impl  Phoenix.LiveView
   def handle_info(%{event: "update"}, socket) do
     {:noreply, assign_socket(socket)}
   end
