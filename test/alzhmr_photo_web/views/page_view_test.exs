@@ -1,3 +1,3 @@
-defmodule AlzhmrPhotoWeb.PageViewTest do
-  use AlzhmrPhotoWeb.ConnCase, async: true
+defmodule MwcwebWeb.PageViewTest do
+  use MwcwebWeb.ConnCase, async: true
 end

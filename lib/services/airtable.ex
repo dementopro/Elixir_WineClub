@@ -31,11 +31,11 @@ defmodule Services.Airtable do
     end
   end
 
-  defp api_url, do: Application.get_env(:alzhmr_photo, __MODULE__)[:api_url]
+  defp api_url, do: Application.get_env(:mwcweb, __MODULE__)[:api_url]
 
-  defp api_key, do: Application.get_env(:alzhmr_photo, __MODULE__)[:api_key]
+  defp api_key, do: Application.get_env(:mwcweb, __MODULE__)[:api_key]
 
-  defp base_id, do: Application.get_env(:alzhmr_photo, __MODULE__)[:base_id]
+  defp base_id, do: Application.get_env(:mwcweb, __MODULE__)[:base_id]
 
 
 end

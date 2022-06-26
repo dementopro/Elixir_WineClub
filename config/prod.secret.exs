@@ -7,7 +7,7 @@ secret_key_base =
     You can generate one by calling: mix phx.gen.secret
     """
 
-config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint,
+config :mwcweb, MwcwebWeb.Endpoint,
   http: [
     port: String.to_integer(System.get_env("PORT") || "4000"),
     transport_options: [socket_opts: [:inet6]]
@@ -15,7 +15,7 @@ config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint,
   secret_key_base: secret_key_base
 
 # Airtable configuration
-config :alzhmr_photo, Services.Airtable,
+config :mwcweb, Services.Airtable,
   api_key: System.get_env("AIRTABLE_API_KEY"),
   base_id: System.get_env("AIRTABLE_BASE_ID"),
   api_url: "https://api.airtable.com/v0/"

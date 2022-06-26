@@ -7,14 +7,14 @@
 # General application configuration
 import Config
 
-#config :alzhmr_photo,
-#  ecto_repos: [AlzhmrPhoto.Repo]
+#config :mwcweb,
+#  ecto_repos: [Mwcweb.Repo]
 
 # Configures the endpoint
-config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint,
+config :mwcweb, MwcwebWeb.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: AlzhmrPhotoWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: AlzhmrPhoto.PubSub,
+  render_errors: [view: MwcwebWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Mwcweb.PubSub,
   live_view: [signing_salt: "oTMiVvhe"]
 
 # Configures the mailer
@@ -24,7 +24,7 @@ config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :alzhmr_photo, AlzhmrPhoto.Mailer, adapter: Swoosh.Adapters.Local
+config :mwcweb, Mwcweb.Mailer, adapter: Swoosh.Adapters.Local
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false
@@ -73,12 +73,12 @@ config :tailwind,
   ]
 
 # scott airtable keys
-config :alzhmr_photo, Services.Airtable,
+config :mwcweb, Services.Airtable,
   api_key: "keyN7kPZVO7gOoIS4",
-  base_id: "app1w7FgwDnM4CRP4",
+  base_id: "appOZTBWdbJGznxcU",
   api_url: "https://api.airtable.com/v0/"
 
-  config :alzhmr_photo, AlzhmrPhoto.AirtableRepo, adapter: AlzhmrPhoto.AirtableRepo.Http
+  config :mwcweb, Mwcweb.AirtableRepo, adapter: Mwcweb.AirtableRepo.Http
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

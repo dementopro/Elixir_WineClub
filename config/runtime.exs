@@ -12,12 +12,12 @@ import Config
 # If you use `mix release`, you need to explicitly enable the server
 # by passing the PHX_SERVER=true when you start it:
 #
-#     PHX_SERVER=true bin/alzhmr_photo start
+#     PHX_SERVER=true bin/mwcweb start
 #
 # Alternatively, you can use `mix phx.gen.release` to generate a `bin/server`
 # script that automatically sets the env var above.
 if System.get_env("PHX_SERVER") do
-  config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint, server: true
+  config :mwcweb, MwcwebWeb.Endpoint, server: true
 end
 
 if config_env() == :prod do
@@ -28,7 +28,7 @@ if config_env() == :prod do
 # SCOTT      For example: ecto://USER:PASS@HOST/DATABASE
 # SCOTT      """
 # SCOTT  maybe_ipv6 = if System.get_env("ECTO_IPV6"), do: [:inet6], else: []
-  # SCOTT config :alzhmr_photo, AlzhmrPhoto.Repo,
+  # SCOTT config :mwcweb, Mwcweb.Repo,
     # ssl: true,
    # SCOTT url: database_url,
    # SCOTT pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
@@ -49,7 +49,7 @@ if config_env() == :prod do
   host = System.get_env("PHX_HOST") || "example.com"
   port = String.to_integer(System.get_env("PORT") || "4000")
 
-  config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint,
+  config :mwcweb, MwcwebWeb.Endpoint,
     url: [host: host, port: 443, scheme: "https"],
     http: [
       # Enable IPv6 and bind on all interfaces.
@@ -67,7 +67,7 @@ if config_env() == :prod do
   # Also, you may need to configure the Swoosh API client of your choice if you
   # are not using SMTP. Here is an example of the configuration:
   #
-  #     config :alzhmr_photo, AlzhmrPhoto.Mailer,
+  #     config :mwcweb, Mwcweb.Mailer,
   #       adapter: Swoosh.Adapters.Mailgun,
   #       api_key: System.get_env("MAILGUN_API_KEY"),
   #       domain: System.get_env("MAILGUN_DOMAIN")

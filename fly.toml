@@ -1,6 +1,6 @@
-# fly.toml file generated for alzhmr on 2022-06-07T00:23:24-07:00
+# fly.toml file generated for mwcwweb on 2022-06-07T00:23:24-07:00
 
-app = "alzhmr"
+app = "mwcweb"
 
 kill_signal = "SIGTERM"
 kill_timeout = 5

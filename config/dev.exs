@@ -1,11 +1,11 @@
 import Config
 
 # Configure your database
-#config :alzhmr_photo, AlzhmrPhoto.Repo,
+#config :mwcweb, Mwcweb.Repo,
 #  username: "postgres",
 #  password: "postgres",
 #  hostname: "localhost",
-#  database: "alzhmr_photo_dev",
+#  database: "mwcweb_dev",
 #  stacktrace: true,
 #  show_sensitive_data_on_connection_error: true,
 #  pool_size: 10
@@ -16,7 +16,7 @@ import Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with esbuild to bundle .js and .css sources.
-config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint,
+config :mwcweb, MwcwebWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   # SCOTT WAS   http: [ip: {127, 0, 0, 1}, port: 4000],
@@ -66,13 +66,13 @@ config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint,
+config :mwcweb, MwcwebWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/alzhmr_photo_web/(live|views)/.*(ex)$",
-      ~r"lib/alzhmr_photo_web/templates/.*(eex)$"
+      ~r"lib/mwcweb_web/(live|views)/.*(ex)$",
+      ~r"lib/mwcweb_web/templates/.*(eex)$"
     ]
   ]
 

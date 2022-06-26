@@ -11,8 +11,8 @@ import Config
 # before starting your production server.
 
 #OLD
-#config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint, cache_static_manifest: "priv/static/cache_manifest.json"
-config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint,
+#config :mwcweb, MwcwebWeb.Endpoint, cache_static_manifest: "priv/static/cache_manifest.json"
+config :mwcweb, MwcwebWeb.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [scheme: "https", host: "fix.modernwineclub.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
@@ -28,7 +28,7 @@ config :logger, level: :info
 # To get SSL working, you will need to add the `https` key
 # to the previous section and set your `:url` port to 443:
 #
-#     config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint,
+#     config :mwcweb, MwcwebWeb.Endpoint,
 #       ...,
 #       url: [host: "example.com", port: 443],
 #       https: [
@@ -52,7 +52,7 @@ config :logger, level: :info
 # We also recommend setting `force_ssl` in your endpoint, ensuring
 # no data is ever sent via http, always redirecting to https:
 #
-#     config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint,
+#     config :mwcweb, MwcwebWeb.Endpoint,
 #       force_ssl: [hsts: true]
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
