@@ -144,3 +144,32 @@
   0% { opacity: 1; }
   100% { opacity: 0; }
 }
+
+/* ROMAN TEST FONTS added by scott */
+
+h1, .h1 {
+  font-size: 38px;
+  font-family: "Baskerville No 2", serif;
+  line-height: 1.5; 
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.3px; 
+  }
+  h2, .h2, .pagination .page {
+    font-size: 28px;
+    font-family: Nunito;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.3px; 
+    line-height: 1.5; 
+  }
+  h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: Nunito;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  p {
+  font-size: 20px;
+    color: #1f1f1f;
+  }
