@@ -197,3 +197,12 @@ h1, .h1 {
       margin: 40px auto;
     }
   }
+  
+  /*cart icon*/ 
+  .c7-link {
+    display: flex;
+  }
+
+  .c7-link svg {
+    stroke: #9ca3af !important;
+  }
