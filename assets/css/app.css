@@ -173,3 +173,27 @@ h1, .h1 {
   font-size: 20px;
     color: #1f1f1f;
   }
+/* 2022-07-17 22:07:00 */
+  .account-form {
+    /* position: absolute;
+    transform: translate(-50%, 50%);
+    top: 0;
+    left: 50%; */
+    width: 100vw;
+  }
+
+  .account-form>img {
+    width: 15%;
+    margin: 40px auto;
+  }
+
+  .account-form h1 {
+    font-size: 28px!important;
+  }
+
+  @media screen and (max-width: 768px) {
+    .account-form>img {
+      width: 35%;
+      margin: 40px auto;
+    }
+  }

@@ -1,17 +1,21 @@
-<section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
+<!-- <section class="phx-hero">
+  <h1>
+    <%= gettext "Welcome to %{name}!" , name: "Phoenix" %>
+  </h1>
   <p>Peace of mind from prototype to production</p>
-</section>
-<section class="phx-hero">
-  <h1>Commerce 7 Div</h1>
+</section> -->
+<section class="phx-hero account-form">
+  <!-- <h1>Commerce 7 Div</h1> -->
   <div id="c7-account"></div>
 </section>
 
-<section class="phx-hero">
-  <h1>Commerce 7 Content</h1>
+<section class="phx-hero account-form">
+  <!--<img src="/assets/images/logo.png" alt="logo">-->
+  <img src={Routes.static_path(@conn, "/images/logo.png" )} alt="Wine Logo" />
+  <!-- <h1>Commerce 7 Content</h1> -->
   <div id="c7-content"></div>
 </section>
-<section class="row">
+<!-- <section class="row">
   <article class="column">
     <h2>Resources</h2>
     <ul>
@@ -46,4 +50,4 @@
       </li>
     </ul>
   </article>
-</section>
+</section> -->
