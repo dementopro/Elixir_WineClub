@@ -206,3 +206,7 @@ h1, .h1 {
   .c7-link svg {
     stroke: #9ca3af !important;
   }
+
+  a:hover, a:focus, a:active {
+    text-decoration: unset !important;
+  }

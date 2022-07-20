@@ -27,8 +27,8 @@
 // Include phoenix_html to handle method=PUT/DELETE in forms and buttons.
 import "phoenix_html"
 // Establish Phoenix Socket and LiveView configuration.
-import {Socket} from "phoenix"
-import {LiveSocket} from "phoenix_live_view"
+import { Socket } from "phoenix"
+import { LiveSocket } from "phoenix_live_view"
 import topbar from "../vendor/topbar"
 
 // comment by scott let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
@@ -51,7 +51,7 @@ let liveSocket = new LiveSocket("/live", Socket, {
 });
 // ENDALPINE
 // Show progress bar on live navigation and form submits
-topbar.config({barColors: {0: "#29d"}, shadowColor: "rgba(0, 0, 0, .3)"})
+topbar.config({ barColors: { 0: "#29d" }, shadowColor: "rgba(0, 0, 0, .3)" })
 window.addEventListener("phx:page-loading-start", info => topbar.show())
 window.addEventListener("phx:page-loading-stop", info => topbar.hide())
 
@@ -63,4 +63,19 @@ liveSocket.connect()
 // >> liveSocket.enableLatencySim(1000)  // enabled for duration of browser session
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
+
+var productDropdown = document.getElementById("wines");
+
+productDropdown.addEventListener('click', removeClass);
+
+var setVisibleList = 1;
+
+function removeClass() {
+  var hiddenClassElement = document.querySelector('[aria-labelledby="wine-product"]');
+
+  setVisibleList *= -1;
+  setVisibleList == -1 ? hiddenClassElement.classList.remove("hidden") : hiddenClassElement.classList.add("hidden");
+}
+
+
 
