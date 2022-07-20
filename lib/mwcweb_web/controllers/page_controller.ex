@@ -21,7 +21,7 @@ defmodule MwcwebWeb.PageController do
     render(conn, "cart.html")
   end
 
-  def checkouyt(conn, _params) do
+  def checkout(conn, _params) do
     render(conn, "checkout.html")
   end
 end
