@@ -16,4 +16,12 @@ defmodule MwcwebWeb.PageController do
   def wines(conn, _params) do
     render(conn, "wines.html")
   end
+
+  def cart(conn, _params) do
+    render(conn, "cart.html")
+  end
+
+  def checkout(conn, _params) do
+    render(conn, "checkout.html")
+  end
 end
