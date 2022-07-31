@@ -20,9 +20,9 @@ defmodule MwcwebWeb.ConnCase do
   using do
     quote do
       # Import conveniences for testing with connections
-      import Plug.Conn
-      import Phoenix.ConnTest
-      import MwcwebWeb.ConnCase
+       import Plug.Conn
+       import Phoenix.ConnTest
+       import MwcwebWeb.ConnCase
 
       alias MwcwebWeb.Router.Helpers, as: Routes
 
@@ -32,7 +32,7 @@ defmodule MwcwebWeb.ConnCase do
   end
 
   setup tags do
-    Mwcweb.DataCase.setup_sandbox(tags)
+   # Mwcweb.DataCase.setup_sandbox(tags)
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end
