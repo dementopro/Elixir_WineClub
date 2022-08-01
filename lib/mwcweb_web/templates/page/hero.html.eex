@@ -5,9 +5,9 @@
         <h1 class="title is-family-secondary is-1 mb-6"><%= @content.title %></h1>
         <p class="subtitle is-3 mb-6"><%= @content.content %></p>
       </header>
-    <!--  <figure class="image">
+      <figure class="image">
         <img class="" src="<%= @content.image %>" alt="Placeholder image">
-      </figure>  -->
+      </figure>
     </div>
   </div>
 </section>

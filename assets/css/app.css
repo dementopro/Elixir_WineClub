@@ -210,3 +210,11 @@ h1, .h1 {
   a:hover, a:focus, a:active {
     text-decoration: unset !important;
   }
+
+  .c7-btn--primary, .c7-btn--alt {
+    background-color: #444 !important;
+  }
+
+  .c7-btn--alt {
+    color: #FFFFFF !important;
+  }
