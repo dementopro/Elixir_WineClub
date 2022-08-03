@@ -72,10 +72,17 @@ var setVisibleList = 1;
 
 function removeClass() {
   var hiddenClassElement = document.querySelector('[aria-labelledby="wine-product"]');
-
   setVisibleList *= -1;
   setVisibleList == -1 ? hiddenClassElement.classList.remove("hidden") : hiddenClassElement.classList.add("hidden");
 }
+
+//TODO: Dropdown mobile menu
+const btn = document.querySelector('button.menu-button');
+const menu = document.querySelector('.mobile-menu');
+
+btn.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+});
 
 
 
