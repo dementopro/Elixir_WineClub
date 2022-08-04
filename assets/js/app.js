@@ -84,5 +84,18 @@ btn.addEventListener('click', () => {
   menu.classList.toggle('hidden');
 });
 
+//IMPLEMENT: Dropdown user_menu
+var user_menu = document.getElementById("usermenu");
+
+user_menu.addEventListener('click', removeuserClass);
+
+var setVisibleList = 1;
+
+function removeuserClass() {
+  var hiddenClassElement = document.querySelector('[aria-labelledby="user-menu-button"]');
+  setVisibleList *= -1;
+  setVisibleList == -1 ? hiddenClassElement.classList.remove("hidden") : hiddenClassElement.classList.add("hidden");
+}
+
 
 
