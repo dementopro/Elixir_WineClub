@@ -36,13 +36,13 @@ defmodule MwcwebWeb.PageLive do
     case fetch_contents() do
       {:ok, contents} ->
         socket
-        |> assign(:page_title, "Home")
+        |> assign(:page_title, "MWC Home")
         |> assign(:contents, contents)
         |> put_flash(:error, nil)
 
       _ ->
         socket
-        |> assign(:page_title, "Home")
+        |> assign(:page_title, "MWC Home")
         |> assign(:contents, nil)
         |> put_flash(:error, "Error fetching data")
     end
