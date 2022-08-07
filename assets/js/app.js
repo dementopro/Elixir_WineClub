@@ -84,7 +84,10 @@ btn.addEventListener('click', () => {
   menu.classList.toggle('hidden');
 });
 
-//IMPLEMENT: Dropdown user_menu
+
+/*
+//IMPLEMENT: DROPDOWN USER_MENU
+//ELIMINATE USERMENU TEMPORARILY
 var user_menu = document.getElementById("usermenu");
 
 user_menu.addEventListener('click', removeuserClass);
@@ -96,6 +99,7 @@ function removeuserClass() {
   setVisibleList *= -1;
   setVisibleList == -1 ? hiddenClassElement.classList.remove("hidden") : hiddenClassElement.classList.add("hidden");
 }
+*/
 
 
 

@@ -218,3 +218,8 @@ h1, .h1 {
   .c7-btn--alt {
     color: #FFFFFF !important;
   }
+
+/*login component*/
+.c7-user-nav__account__login {
+  color: #9ca3af !important;
+}
