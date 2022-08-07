@@ -27,6 +27,8 @@ defmodule MwcwebWeb.Router do
     get "/profile/account", PageController, :profile
     get "/profile/club-membership", PageController, :profile
     get "/profile/create-account", PageController, :profile
+    get "/profile/order-receipt", PageController, :profile
+
     get "/product/products", PageController, :products
     get "/collection/wines", PageController, :wines
     get "/collection/red", PageController, :red
