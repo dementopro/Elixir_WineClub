@@ -220,6 +220,9 @@ h1, .h1 {
   }
 
 /*login component*/
-.c7-user-nav__account__login {
+.c7-user-nav__account__login, .c7-user-nav__account__name {
   color: #9ca3af !important;
+}
+.c7-user-nav__account__name svg {
+  stroke: #9ca3af !important;
 }

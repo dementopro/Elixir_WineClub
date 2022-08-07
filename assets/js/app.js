@@ -84,7 +84,6 @@ btn.addEventListener('click', () => {
   menu.classList.toggle('hidden');
 });
 
-
 /*
 //IMPLEMENT: DROPDOWN USER_MENU
 //ELIMINATE USERMENU TEMPORARILY
