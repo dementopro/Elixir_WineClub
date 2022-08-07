@@ -21,6 +21,12 @@ defmodule MwcwebWeb.Router do
 
     live "/articles/:id/:slug", ShowArticleLive
     get "/profile/login", PageController, :profile
+    get "/profile/logout", PageController, :profile
+    get "/profile/order-history", PageController, :profile
+    get "/profile/reservation", PageController, :profile
+    get "/profile/account", PageController, :profile
+    get "/profile/club-membership", PageController, :profile
+    get "/profile/create-account", PageController, :profile
     get "/product/products", PageController, :products
     get "/collection/wines", PageController, :wines
     get "/collection/red", PageController, :red
