@@ -70,10 +70,19 @@
       </div>
     </div>
   </div>
-  <figure class="image main-image is-256x256">
+    <figure class="image main-image is-256x256">
         <img src="<%= @article.image %>">
       </figure>
+       <!-- RENDER HTML <div class="content"><%= raw(@article.content) %></div> -->
+
+<section>
+       <!-- RENDER MARKDOWN <div class="content"><%= raw(Earmark.as_html!(@article.content)) %></div> -->
+
+      <div class="content"><%= raw(Earmark.as_html!(@article.content)) %></div>
+
+
+  </section>
 </div>
-    </div>
+
   </article>
 <% end %>

@@ -52,6 +52,8 @@ defmodule Mwcweb.MixProject do
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:tesla, "~> 1.3"},
       {:hackney, "~> 1.16.0"},
+      {:earmark, "~> 1.4.25"},
+
       {:tailwind, "~> 0.1", runtime: Mix.env() == :dev}
 
 
