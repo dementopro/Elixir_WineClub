@@ -148,8 +148,8 @@
 /* ROMAN TEST FONTS added by scott */
 
 h1, .h1 {
-  font-size: 38px;
-  font-family: "Baskerville No 2", serif;
+  font-size: 36px;
+  font-family: "Inter", sans-serif;
   line-height: 1.5; 
   font-weight: 700;
   font-style: normal;
