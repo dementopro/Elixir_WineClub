@@ -1,7 +1,7 @@
 defmodule Mwcweb.AirtableRepo.Http.Decoder do
   @moduledoc false
 
-  alias Mwcweb.{Article, Content}
+  alias Mwcweb.{Article, Content, Blogpost}
 
   def decode(response) when is_list(response) do
     Enum.map(response, &decode/1)
@@ -46,6 +46,26 @@ defmodule Mwcweb.AirtableRepo.Http.Decoder do
       url: Map.get(fields, "url", "")
     }
   end
+
+  def decode(%{
+    "fields" =>
+      %{
+        "summary" => summary
+      } = fields
+  }) do
+%Blogpost{
+  id: Map.get(fields, "id", ""),
+  bslug: Map.get(fields, "bslug", ""),
+  disporder: Map.get(fields, "disporder", ""),
+  title: Map.get(fields, "title", ""),
+  content: Map.get(fields, "content", ""),
+  summary: summary,
+  published_at: Map.get(fields, "published_at", ""),
+  image: decode_image(Map.get(fields, "image", "")),
+
+}
+end
+
 
   defp decode_image([%{"url" => url}]), do: url
   defp decode_image(_), do: ""

@@ -18,6 +18,7 @@ defmodule Mwcweb.Application do
       # Start cache processes
       Mwcweb.Article.Cache,
       Mwcweb.Content.Cache,
+      Mwcweb.Blogpost.Cache,
       # Start the Endpoint (http/https)
       MwcwebWeb.Endpoint
       # Start a worker by calling: Mwcweb.Worker.start_link(arg)
