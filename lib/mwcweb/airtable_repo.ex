@@ -6,8 +6,8 @@ defmodule Mwcweb.AirtableRepo do
 
   @type entity_types :: Article.t() | Content.t() | Blogpost.t()
 
-  @callback all(Article | Content ) :: {:ok, [entity_types]} | {:error, term}
-  @callback get(Article | Content , String.t()) :: {:ok, entity_types} | {:error, term}
+  @callback all(Article | Content | Blogpost ) :: {:ok, [entity_types]} | {:error, term}
+  @callback get(Article | Content | Blogpost , String.t()) :: {:ok, entity_types} | {:error, term}
 
   @adapter Application.get_env(:mwcweb, __MODULE__)[:adapter]
 
@@ -21,7 +21,7 @@ defmodule Mwcweb.AirtableRepo do
   def contents(false), do: all(Content)
   def contents(true), do: @adapter.all(Content)
 
-  @spec contents(boolean) :: {:ok, [Blogpost.t()]} | {:error, term}
+  @spec blogposts(boolean) :: {:ok, [Blogpost.t()]} | {:error, term}
   def blogposts(skip_cache \\ false)
   def blogposts(false), do: all(Blogpost)
   def blogposts(true), do: @adapter.all(Blogpost)

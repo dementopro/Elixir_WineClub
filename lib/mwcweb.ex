@@ -7,10 +7,11 @@ defmodule Mwcweb do
   if it comes from the database, an external API or others.
   """
   defdelegate articles, to: Mwcweb.AirtableRepo
-
+  defdelegate blogposts, to: Mwcweb.AirtableRepo
   defdelegate contents, to: Mwcweb.AirtableRepo
 
 
   defdelegate get_article(id), to: Mwcweb.AirtableRepo
+  defdelegate get_blogpost(id), to: Mwcweb.AirtableRepo
 
 end

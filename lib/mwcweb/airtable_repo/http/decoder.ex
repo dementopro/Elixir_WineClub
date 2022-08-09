@@ -48,18 +48,19 @@ defmodule Mwcweb.AirtableRepo.Http.Decoder do
   end
 
   def decode(%{
-    "fields" =>
-      %{
-        "summary" => summary
-      } = fields
-  }) do
+    "id" => id,
+        "fields" =>
+          %{
+            "bslug" => bslug
+          } = fields
+      }) do
 %Blogpost{
-  id: Map.get(fields, "id", ""),
-  bslug: Map.get(fields, "bslug", ""),
+  id: id,
+  bslug: bslug,
   disporder: Map.get(fields, "disporder", ""),
   title: Map.get(fields, "title", ""),
   content: Map.get(fields, "content", ""),
-  summary: summary,
+  summary: Map.get(fields, "summary", ""),
   published_at: Map.get(fields, "published_at", ""),
   image: decode_image(Map.get(fields, "image", "")),
 

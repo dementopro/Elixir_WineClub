@@ -1,7 +1,7 @@
 <%= if @articles  do %>
   <section class="section">
     <div class="container">
-      <header class="mb-6 mt-6 ml-10"><h2 class="title">Blog </h2></header>
+      <header class="mb-6 mt-6 ml-10"><h2 class="title">Wines </h2></header>
       <div class="columns is-multiline blog-columns">
         <%= for {article, counter } <- Enum.with_index(@articles)  , do: render_article(@socket, article, counter ) %>
       </div>

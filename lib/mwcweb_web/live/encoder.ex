@@ -1,7 +1,7 @@
 defmodule MwcwebWeb.LiveEncoder do
   @moduledoc false
 
-  alias Mwcweb.{Article, Content}
+  alias Mwcweb.{Article, Content, Blogpost}
 
   def contents(items) when is_list(items) do
     {features, rest} =
@@ -18,11 +18,19 @@ defmodule MwcwebWeb.LiveEncoder do
     Enum.map(articles, &encode/1)
   end
 
+  def blogposts(blogposts) do
+    Enum.map(blogposts, &encode/1)
+  end
 
 
   def encode(%Content{} = content) do
     Map.take(content, [:id, :type, :title, :content, :image, :styles, :url])
   end
+
+  def encode(%Blogpost{} = blogpost) do
+    Map.take(blogpost, [:id, :bslug, :disporder, :description, :title, :summary, :content, :image , :published_at])
+  end
+
 
   def encode(%Article{} = article) do
     Map.take(article, [:id, :slug, :title, :description,  :image, :author,  :published_at])

@@ -20,6 +20,9 @@ defmodule MwcwebWeb.Router do
     live "/articles", ArticlesLive
 
     live "/articles/:id/:slug", ShowArticleLive
+    live "/blogposts", BlogpostsLive
+
+    live "/blogposts/:id/:bslug", ShowBlogpostLive
     get "/profile/login", PageController, :profile
     get "/profile/logout", PageController, :profile
     get "/profile/order-history", PageController, :profile

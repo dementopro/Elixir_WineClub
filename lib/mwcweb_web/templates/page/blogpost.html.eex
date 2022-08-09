@@ -1,0 +1,24 @@
+<%= live_patch to: Routes.live_path(@socket, MwcwebWeb.ShowBlogpostLive, @blogpost.id, @blogpost.bslug), class: "column is-one-quarter article-list__article" do %>
+    <div class="card blog-card">
+      <div class="card-image" style="border-bottom: 1px solid lightgrey">
+        <figure class="image is-128x128">
+          <img class="article__image" alt="bottle" src="<%= @blogpost.image %>">
+        </figure>
+      </div>
+
+      <header class="card-header">
+        <p class="card-header-title">
+          <%= @blogpost.title %>
+        </p>
+      </header>
+
+      <div class="card-content">
+        <div class="content">
+
+
+          <h4 class="subtitle is-6 blog-description"><%= @blogpost.content %></h4>
+        </div>
+       </div> <%= # end card-content %>
+     </div> <%= # end card %>
+
+<% end %>
