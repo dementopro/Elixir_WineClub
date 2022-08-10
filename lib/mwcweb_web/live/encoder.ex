@@ -28,7 +28,7 @@ defmodule MwcwebWeb.LiveEncoder do
   end
 
   def encode(%Blogpost{} = blogpost) do
-    Map.take(blogpost, [:id, :bslug, :disporder, :description, :title, :summary, :content, :image , :published_at])
+    Map.take(blogpost, [:id, :bslug, :disporder, :description, :title, :summary, :content, :blogcover_image, :image , :published_at])
   end
 
 

@@ -11,9 +11,10 @@ defmodule Mwcweb.Blogpost do
           summary: String.t(),
           image: String.t(),
           content: String.t(),
+          blogcover_image: String.t(),
          # author: String.t(),
           published_at: Date.t()
         }
 
-  defstruct [:id, :bslug, :title, :disporder, :description, :summary, :image, :content, :published_at]
+  defstruct [:id, :bslug, :title, :disporder, :description, :summary, :image, :blogcover_image, :content, :published_at]
 end

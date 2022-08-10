@@ -2,7 +2,7 @@
     <div class="card blog-card">
       <div class="card-image" style="border-bottom: 1px solid lightgrey">
         <figure class="image is-128x128">
-          <img class="article__image" alt="bottle" src="<%= @blogpost.image %>">
+          <img class="article__image" alt="blog cover" src="<%= @blogpost.blogcover_image %>">
         </figure>
       </div>
 

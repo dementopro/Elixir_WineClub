@@ -63,6 +63,7 @@ defmodule Mwcweb.AirtableRepo.Http.Decoder do
   summary: Map.get(fields, "summary", ""),
   published_at: Map.get(fields, "published_at", ""),
   image: decode_image(Map.get(fields, "image", "")),
+  blogcover_image: decode_image(Map.get(fields, "blogcover_image", "")),
 
 }
 end
