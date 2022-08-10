@@ -16,5 +16,9 @@ defmodule MwcwebWeb.PageControllerTest do
     assert html_response(conn, 200) =~ "<h6>bottle shop page</h6>"
   end
 
+  test "GET Blog blog", %{conn: conn} do
+    conn = get(conn, "/blogposts")
+    assert html_response(conn, 200) =~ "card blog-card"
+  end
 
 end
