@@ -40,4 +40,8 @@ defmodule MwcwebWeb.PageController do
   def checkout(conn, _params) do
     render(conn, "checkout.html")
   end
+
+  def membership(conn, _params) do
+    render(conn, "membership.html")
+  end
 end
