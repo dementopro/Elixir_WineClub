@@ -152,20 +152,6 @@
       <!-- Mobile menu, show/hide based on menu state. -->
       <div class="md:hidden mobile-menu">
         <div class="menu-header-container px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <!--
-          <ul id="menu-header" class="menu">
-            <li class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
-              <a href="#" aria-current="page">Wine</a>
-              <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true"
-                aria-label="Show submenu for Wines">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7">
-                  <path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                    d="M1.385 1.417L6 5.583m4.615-4.166L6 5.583"></path>
-                </svg>
-              </button>
-            </li>
-          </ul>
-        -->
           <ul>
             <li>
               <a href="/collection/bottle-shop" class="text-white block px-3 py-2 rounded-md text-base font-medium"
@@ -207,26 +193,24 @@
                       clip-rule="evenodd"></path>
                   </svg>
                 </a>
-                <div class="hidden" aria-labelledby="mobile_drop" tabindex="-1">
-                  <ul>
-                    <li>
-                      <a href="/collection/wines/#" class="text-white font-medium" role="menuitem" tabindex="-1"
-                        id="wine-product-item-0">All Wines</a>
-                    </li>
-                    <li>
-                      <a href="/collection/red" class="text-white font-medium" role="menuitem" tabindex="-1"
-                        id="wine-product-item-0">Red</a>
-                    </li>
-                    <li>
-                      <a href="/collection/wines/#" class="text-white font-medium" role="menuitem" tabindex="-1"
-                        id="wine-product-item-1">White</a>
-                    </li>
-                    <li>
-                      <a href="/collection/wines/#" class="text-white font-medium" role="menuitem" tabindex="-1"
-                        id="wine-product-item-1">Sparkling</a>
-                    </li>
-                  </ul>
-                </div>
+                <ul class="hidden" aria-labelledby="mobile_drop" tabindex="-1">
+                  <li>
+                    <a href="/collection/wines/#" class="text-white font-medium" role="menuitem" tabindex="-1"
+                      id="wine-product-item-0">All Wines</a>
+                  </li>
+                  <li>
+                    <a href="/collection/red" class="text-white font-medium" role="menuitem" tabindex="-1"
+                      id="wine-product-item-0">Red</a>
+                  </li>
+                  <li>
+                    <a href="/collection/wines/#" class="text-white font-medium" role="menuitem" tabindex="-1"
+                      id="wine-product-item-1">White</a>
+                  </li>
+                  <li>
+                    <a href="/collection/wines/#" class="text-white font-medium" role="menuitem" tabindex="-1"
+                      id="wine-product-item-1">Sparkling</a>
+                  </li>
+                </ul>
               </div>
             </li>
           </ul>
