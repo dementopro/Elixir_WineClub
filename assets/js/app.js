@@ -84,21 +84,19 @@ btn.addEventListener('click', () => {
   menu.classList.toggle('hidden');
 });
 
-/*
-//IMPLEMENT: DROPDOWN USER_MENU
-//ELIMINATE USERMENU TEMPORARILY
-var user_menu = document.getElementById("usermenu");
 
-user_menu.addEventListener('click', removeuserClass);
+//IMPLEMENT: DROPDOWN WINE_MOBILE
+var user_menu = document.getElementById("wine_mobile");
+
+user_menu.addEventListener('click', mobilewinedropdown);
 
 var setVisibleList = 1;
 
-function removeuserClass() {
-  var hiddenClassElement = document.querySelector('[aria-labelledby="user-menu-button"]');
+function mobilewinedropdown() {
+  var hiddenClassElement = document.querySelector('[aria-labelledby="mobile_drop"]');
   setVisibleList *= -1;
   setVisibleList == -1 ? hiddenClassElement.classList.remove("hidden") : hiddenClassElement.classList.add("hidden");
 }
-*/
 
 
 

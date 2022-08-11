@@ -151,7 +151,7 @@
 
       <!-- Mobile menu, show/hide based on menu state. -->
       <div class="md:hidden mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div class="menu-header-container px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <!--
           <ul id="menu-header" class="menu">
             <li class="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
@@ -166,25 +166,70 @@
             </li>
           </ul>
         -->
-          <a href="/collection/bottle-shop"
-            class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Bottle
-            Shop</a>
-          <a href="/collection/wine-futures"
-            class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Wine
-            Futures</a>
-          <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-            aria-current="page">Events</a>
-          <a href="/membership" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-            aria-current="page">Membership</a>
-          <a href="/blogposts" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-            aria-current="page">Blog</a>
-          <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-            aria-current="page">Airtable Wines</a>
-          <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-            aria-current="page">Wines</a>
-          <!--  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Settingss</a>
-            -->
-
+          <ul>
+            <li>
+              <a href="/collection/bottle-shop" class="text-white block px-3 py-2 rounded-md text-base font-medium"
+                aria-current="page">Bottle
+                Shop</a>
+            </li>
+            <li>
+              <a href="/collection/wine-futures" class=" text-white block px-3 py-2 rounded-md text-base font-medium"
+                aria-current="page">Wine
+                Futures</a>
+            </li>
+            <li>
+              <a href="#" class=" text-white block px-3 py-2 rounded-md text-base font-medium"
+                aria-current="page">Events</a>
+            </li>
+            <li>
+              <a href="/membership" class=" text-white block px-3 py-2 rounded-md text-base font-medium"
+                aria-current="page">Membership</a>
+            </li>
+            <li>
+              <a href="/blogposts" class=" text-white block px-3 py-2 rounded-md text-base font-medium"
+                aria-current="page">Blog</a>
+            </li>
+            <li>
+              <a href="/articles" class="text-white block px-3 py-2 rounded-md text-base font-medium"
+                aria-current="page">Airtable
+                Wines</a>
+            </li>
+            <li>
+              <div id="wine_mobile" aria-haspopup="true">
+                <a type="button"
+                  class="flex items-center justify-between text-white px-3 py-2 rounded-md text-base font-medium"
+                  id="wine-product" aria-expanded="false" aria-haspopup="true" href="javascript:;" aria-current="page">
+                  Wines
+                  <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+                <div class="hidden" aria-labelledby="mobile_drop" tabindex="-1">
+                  <ul>
+                    <li>
+                      <a href="/collection/wines/#" class="text-white font-medium" role="menuitem" tabindex="-1"
+                        id="wine-product-item-0">All Wines</a>
+                    </li>
+                    <li>
+                      <a href="/collection/red" class="text-white font-medium" role="menuitem" tabindex="-1"
+                        id="wine-product-item-0">Red</a>
+                    </li>
+                    <li>
+                      <a href="/collection/wines/#" class="text-white font-medium" role="menuitem" tabindex="-1"
+                        id="wine-product-item-1">White</a>
+                    </li>
+                    <li>
+                      <a href="/collection/wines/#" class="text-white font-medium" role="menuitem" tabindex="-1"
+                        id="wine-product-item-1">Sparkling</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
         <!--
         <div class="pt-4 pb-3 border-t border-gray-700">
