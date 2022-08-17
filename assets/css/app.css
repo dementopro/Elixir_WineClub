@@ -163,16 +163,24 @@ h1, .h1 {
     letter-spacing: 0.3px; 
     line-height: 1.5; 
   }
-  h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  h3, .h3, h5, .h5, h6, .h6 {
     font-family: Nunito;
     font-weight: 400;
     font-style: normal;
   }
-  
-  p {
-  font-size: 20px;
-    color: #1f1f1f;
+
+  h3 {
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    font-size: 2rem;
   }
+  
+  h4, .h4 {
+    font-size: 1.65rem;
+    line-height: 1.2;
+    margin-bottom: 0.2em;
+  }
+
 /* 2022-07-17 22:07:00 */
   .account-form {
     /* position: absolute;
@@ -268,4 +276,106 @@ h1, .h1 {
   -webkit-box-orient: vertical;
   display: -webkit-box;
   overflow: hidden;
+}
+/*RESERVATION*/
+.c7t-half-text{
+  display: flex;
+  position: relative;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.c7t-text-block {
+  position: relative;
+  padding: 2.5rem 0;
+}
+
+.c7t-half-text__content {
+  padding: 1rem;
+  position: relative;
+}
+/*MEMBERSHIP PAGE*/
+blockquote p {
+  font-size: 1.8rem;
+  font-style: italic;
+  line-height: 1.2;
+  text-align: center;
+}
+
+blockquote+cite, cite {
+  margin-top: -1.5rem
+}
+
+cite {
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    margin: 0 auto 1.5rem;
+    font-style: normal;
+}
+.c7t-text-block--2col .c7t-template-width {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.c7t-content {
+    margin: 0 auto;
+    max-width: 60rem;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.c7t-content>div {
+  width: 49%;
+}
+
+.c7t-template-width {
+    margin: 0 auto;
+    max-width: 60rem;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.club-selector-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.c7t-text-block--reverse {
+    background-color: #222;
+    color: #eee;
+    padding: 3.5rem 0 !important;
+}
+
+.heading {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 40%;
+}
+
+.heading > h1 {
+  text-shadow: 0 2px 1px rgb(0 0 0 / 50%), 0 4px 2px rgb(0 0 0 / 40%), 0 8px 4px rgb(0 0 0 / 40%), 0 16px 8px rgb(0 0 0 / 35%), 0 32px 16px rgb(0 0 0 / 30%);
+  color: white;
+  font-size: 42px;
+}
+
+em{
+  font-style: italic;
+}
+
+.c7t-text-block--2col .c7t-template-width>div {
+  width: 49%;
+  padding: 0 1%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.c7t-newsletter__form {
+    padding-top: 2rem;
 }

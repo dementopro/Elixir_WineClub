@@ -1,42 +1,77 @@
-<div>
+<div class="c7t-banner">
 
-  <h1 class="title--decorated">Membership</h1>
+  <div class="c7t-template-width c7t-template-width--content-centered">
+    <div class="c7t-banner__content heading">
+      <h1>Memberships</h1>
+    </div>
+    <img style="margin-top: 20px" src={Routes.static_path(@conn, "/images/membership.png" )} alt="tasting" />
+  </div>
+  <!--c7t-template-width-->
+  <a href="#" class="c7t-banner__next-section" aria-label="Scroll down to next section"><span class="bounce"></span></a>
+</div>
+<!--.c7t-banner-->
 
-  <div class="grid__item grid__item large-up--two-thirds large-up--push-one-sixth">
-    <div class="rte page__team__content">
-      <p><img src={Routes.static_path(@conn, "/images/membership.png" )} alt="membership" />
+<div class="c7t-text-block">
+  <div class="c7t-template-width c7t-content">
+    <blockquote>
+      <p>Thank you for considering a Modern Wine Club Membership</p>
+    </blockquote>
+    <p><cite> &#8211; Modern Wine Club</cite></p>
+    <p style="text-align: center;">With each type of club you will enjoy a regular shipment of our wine for your cellar
+      and enjoyment.<br />
+      You will also enjoy complimentary tastings and VIP treatment at our winery.<br />
+      Please call in advance to book your engagement.</p>
+
+  </div>
+  <!--content-->
+</div>
+<!--c7t-text-block-->
+
+<div class="c7t-text-block c7t-text-block--2col">
+  <div class="c7t-template-width c7t-content">
+    <div>
+      <p><img loading="lazy" class="alignnone wp-image-510 size-full" sizes="(max-width: 640px) 100vw, 640px" />
+        <img src={Routes.static_path(@conn, "/images/premium.jpg" )} alt="tasting" />
       </p>
-      <p>Membership is at the heart of Modern Wine Club and brings many benefits:</p>
-      <p><strong>First Allocation of Wines</strong></p>
-      <p>Quality backdoor deals with boutique wineries are in limited supply and our members get first allocations when
-        we
-        source new wines. Many of the best offers we source never make it onto our web site either because our members
-        acquire all available bottles from our mailing list or because the suppliers ask us to keep the offers secret.
-        As
-        such, this web site is only the tip of the iceberg of what happens in the club.</p>
-      <p><strong>Member Pricing for Wines</strong></p>
-      <p>Our members benefit from the lower member tier pricing compared to non-members. Members also have the option to
-        make wire transfer payments for an additional 3% price reduction from the prices listed on the web.</p>
-      <p><strong>Invitation to Special Events</strong></p>
-      <p>Members benefit from invitations to special events such as wine tastings and wine dinners. </p>
-      <p><strong></strong><strong>Membership Fees</strong></p>
-      <p>The membership fee is currently USD 300 per year.</p>
-      <p><strong>Singapore Membership Application</strong></p>
-      <p>To apply for membership, please complete the Typeform below:</p>
-      <p> </p>
-      <div class="typeform-widget" data-url="https://form.typeform.com/to/kwtM5EH4?typeform-medium=embed-snippet"
-        style="width: 100%; height: 600px;"></div>
-      <script>// <![CDATA[
-        (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()
-  // ]]></script>
-      <p><strong>Expression of Interest for Other Cities</strong></p>
-      <p>If you would like Modern Wine Club to come to your city, please register your interest <a
-          href="https://modern-wine-group.typeform.com/to/cjQkW2tN" target="_blank" rel="noopener noreferrer">here</a>.
+      <h4>Premium Club</h4>
+      <p><em>You will receive 48 bottles per year, split into four 12 bottle quarterly shipments.</em></p>
+      <p>Two mixed cases of new releases, award winners, and favourites received four times per year. For wine
+        enthusiasts, and corporate clients who entertain in style.</p>
+      <div class="c7-club-join-button" data-club-slug="slug"></div>
+    </div>
+    <div>
+      <p><img loading="lazy" class="alignnone wp-image-511 size-full" sizes="(max-width: 640px) 100vw, 640px" />
+        <img src={Routes.static_path(@conn, "/images/choice.jpg" )} alt="tasting" />
       </p>
-      <p> </p>
-      <ul></ul>
-      <p> </p>
+      <h4>Choice Club</h4>
+      <p><em>You will receive 48 bottles per year, split into four 12 bottle quarterly shipments.</em></p>
+      <p>Two mixed cases of new releases, award winners, and favourites received four times per year. For wine
+        enthusiasts, and corporate clients who entertain in style.</p>
+      <div class="club-selector-wrapper c7-form"><span class="c7-selectboxWrap"><select class="club-selector">
+            <option value="#">Reds Only</option>
+            <option value="#">Whites Only</option>
+            <option value="#"> Mixed</option>
+          </select></span><a href="/checkout/cart" class="c7-button c7-btn c7-btn--primary"
+          title="Join our club now">Join Now</a></div>
     </div>
   </div>
+</div>
 
+
+<div class="
+    c7t-text-block 
+    c7t-text-block--reverse c7t-text-block--2col  subscribe-columns">
+  <div class="c7t-template-width c7t-content">
+    <div>
+      <p>&nbsp;</p>
+      <h3>Stay in touch</h3>
+      <p>We have a quarterly newsletter to help everyone stay connected. Sign up and keep up to date on upcoming wine
+        releases and winery events. You don&#8217;t want to miss out!</p>
+    </div>
+    <div>
+      <div class="c7t-newsletter__form">
+        <div class="c7-subscribe" data-has-name-field="true"></div>
+      </div>
+    </div>
+  </div>
 </div>

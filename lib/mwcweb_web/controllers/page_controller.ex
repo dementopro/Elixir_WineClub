@@ -44,4 +44,8 @@ defmodule MwcwebWeb.PageController do
   def membership(conn, _params) do
     render(conn, "membership.html")
   end
+
+  def reservation(conn, _params) do
+    render(conn, "reservation.html")
+  end
 end
