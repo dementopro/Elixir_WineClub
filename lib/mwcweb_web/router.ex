@@ -41,6 +41,7 @@ defmodule MwcwebWeb.Router do
     get "/cart", PageController, :cart
     get "/checkout", PageController, :checkout
     get "/checkout/cart", PageController, :checkout
+    get "/checkout/club", PageController, :checkout
     get "/membership", PageController, :membership
     get "/reservation", PageController, :reservation
     # SCOTT get "/", PageController, :index
