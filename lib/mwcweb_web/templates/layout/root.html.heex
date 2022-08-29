@@ -8,6 +8,7 @@
   <meta name="csrf-token" content={csrf_token_value()}>
   <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
 
+
   <%= live_title_tag assigns[:page_title] || "Mwcweb" , suffix: " · Modern Wine Club" %>
     <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css" )} />
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js" )}></script>
@@ -16,175 +17,52 @@
 </head>
 
 <body>
-  <div class="min-h-full">
-    <nav>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <div class="flex items-center">
-            <div class="flex-shrink-0">
-              <a href="/">
-                <img class="mr-10 h-7 w-10" src="/images/mwcicon2.png" alt="MWC Logo">
-              </a>
-              <!--<div class="mr-20 flex-shrink-0">
-              <img class="h-14 w-17" src={Routes.static_path(@conn, "/images/mwc_logo.png" )} alt="Wine Logo" />-->
-            </div>
-            <div class="hidden md:block">
-              <div class="ml-10 flex items-baseline space-x-4">
-                <a href="/collection/bottle-shop"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Bottle
-                  Shop</a>
-                <a href="/collection/wine-futures"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Wine
-                  Futures</a>
-                <a href="/reservation"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reservation</a>
-                <a href="/membership"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Membership</a>
-                <a href="/blogposts"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-                <!-- <a href="/articles"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Airtable
-                  Wines</a>   SCOTT airtable wines-->
-                <!-- <div class="" id="wines" aria-haspopup="true">
-                  <a type="button"
-                    class="max-w-xs text-gray-300 flex items-center hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    id="wine-product" aria-expanded="false" aria-haspopup="true" href="javascript:;"
-                    aria-current="page">
-                    Wines
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" width="12" height="7" viewBox="0 0 12 7">
-                      <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="Layout/Header" transform="translate(-724.000000, -55.000000)" fill="#9396A2"
-                          fill-rule="nonzero">
-                          <g id="Group" transform="translate(150.000000, 35.000000)">
-                            <g id="Solutions" transform="translate(493.000000, 11.000000)">
-                              <path
-                                d="M81.2091965,10.2192857 L85.4949108,14.505 C85.7741965,14.7842857 86.2263394,14.7842857 86.5049108,14.505 L90.7906251,10.2192857 C91.0699108,9.94 91.0699108,9.48785714 90.7906251,9.20928571 C90.5113394,8.93071429 90.0591965,8.93 89.7806251,9.20928571 L85.9999108,12.99 L82.2191965,9.20928571 C81.9399108,8.93 81.4877679,8.93 81.2091965,9.20928571 C80.9306251,9.48857143 80.9299108,9.94071429 81.2091965,10.2192857 L81.2091965,10.2192857 Z"
-                                id="arrow-down"></path>
-                            </g>
-                          </g>
-                        </g>
-                      </g>
-                    </svg>
-                  </a>
-                 <div
-                    class="hidden origin-top-right absolute mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-                    role="menu" aria-orientation="vertical" aria-labelledby="wine-product" tabindex="-1">
-                    <a href="/collection/wines/#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                      tabindex="-1" id="wine-product-item-0">All Wines</a>
-                    <a href="/collection/red" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                      tabindex="-1" id="wine-product-item-0">Red</a>
-                    <a href="/collection/wines/#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                      tabindex="-1" id="wine-product-item-1">White</a>
-                    <a href="/collection/wines/#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                      tabindex="-1" id="wine-product-item-2">Sparkling</a>
-                  </div>  
-              </div> SCOTTT WOINE LIST -->
-                </div>
+  <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800"
+    style="background-color: rgb(37, 37, 37);">
+    <div x-data="{ open: false }"
+      class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+      <div class="p-4 flex flex-row items-center justify-between">
+        <a href="/">
+          <img class="mr-10 h-7 w-10" src="/images/mwcicon2.png" alt="MWC Logo">
+        </a>
+        <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path x-show="!open" fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+            <path x-show="open" fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <nav :class="{'flex': open, 'hidden': !open}"
+        class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+        <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
+          href="/collection/bottle-shop">Bottle Shop</a>
+        <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
+          href="/collection/wine-futures">Wine Futures</a>
+        <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
+          href="/reservation">Reservation</a>
+        <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
+          href="/membership">Membership</a>
+        <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
+          href="/blogposts">Blog</a>
+      </nav>
 
-            </div>
-          </div>
-          <div class="dispaly flex">
-            <div class="flex items-center lg:order-2">
-              <div id="c7-cart"></div>
-              <div>
-                <a href="/profile/login" class="block px-2 py-2 text-sm" role="menuitem" tabindex="-1"
-                  id="user-menu-item-0">
-                  <div id="c7-account"></div>
-                </a>
-              </div>
-              <button type="button" aria-label="Search this website" data-bs-toggle="modal"
-                data-bs-target="#searchmodal" title="Search">
-                <svg style="color: rgb(214, 211, 211)" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    fill="white"></path>
-                </svg>
-              </button>
-              <!--Modal-->
-            </div>
-            <div class="md:hidden flex items-center">
-              <button class="outline-none menu-button">
-                <svg class="block w-6 h-6 text-gray-500" style="margin-left: 10px" fill="none" stroke-linecap="round"
-                  stroke-linejoin="round" stroke-width="2" viewBox="0 00 24 24" stroke="currentColor">
-                  <path d="m4 6h16M4 12h16M4 18h16">
-                  </path>
-                </svg>
-              </button>
-            </div>
+      <div class="hidden md:block ml-10 dispaly-end">
+        <div class="flex items-center lg:order-2">
+          <div id="c7-cart"></div>
+          <div>
+            <a href="/profile/login" class="block px-2 py-2 text-sm">
+              <div id="c7-account"></div>
+            </a>
           </div>
         </div>
       </div>
-
-      <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="md:hidden mobile-menu">
-        <div class="menu-header-container px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <ul>
-            <li>
-              <a href="/collection/bottle-shop" class="text-white block px-3 py-2 rounded-md text-base font-medium"
-                aria-current="page">Bottle
-                Shop</a>
-            </li>
-            <li>
-              <a href="/collection/wine-futures" class=" text-white block px-3 py-2 rounded-md text-base font-medium"
-                aria-current="page">Wine
-                Futures</a>
-            </li>
-            <li>
-              <a href="/reservation" class=" text-white block px-3 py-2 rounded-md text-base font-medium"
-                aria-current="page">Reservation</a>
-            </li>
-            <li>
-              <a href="/membership" class=" text-white block px-3 py-2 rounded-md text-base font-medium"
-                aria-current="page">Membership</a>
-            </li>
-            <li>
-              <a href="/blogposts" class=" text-white block px-3 py-2 rounded-md text-base font-medium"
-                aria-current="page">Blog</a>
-            </li>
-            <!-- <li>
-              <a href="/articles" class="text-white block px-3 py-2 rounded-md text-base font-medium"
-                aria-current="page">Airtable
-                Wines</a>
-            </li>   SCOTT -->
-            <!-- <li>
-              <div id="wine_mobile" aria-haspopup="true">
-                <a type="button"
-                  class="flex items-center justify-between text-white px-3 py-2 rounded-md text-base font-medium"
-                  id="wine-product" aria-expanded="false" aria-haspopup="true" href="javascript:;" aria-current="page">
-                  Wines
-                  <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                </a>
-                 <ul class="hidden" aria-labelledby="mobile_drop" tabindex="-1">
-                  <li>
-                    <a href="/collection/wines/#" class="text-white font-medium" role="menuitem" tabindex="-1"
-                      id="wine-product-item-0">All Wines</a>
-                  </li>
-                  <li>
-                    <a href="/collection/red" class="text-white font-medium" role="menuitem" tabindex="-1"
-                      id="wine-product-item-0">Red</a>
-                  </li>
-                  <li>
-                    <a href="/collection/wines/#" class="text-white font-medium" role="menuitem" tabindex="-1"
-                      id="wine-product-item-1">White</a>
-                  </li>
-                  <li>
-                    <a href="/collection/wines/#" class="text-white font-medium" role="menuitem" tabindex="-1"
-                      id="wine-product-item-1">Sparkling</a>
-                  </li>
-                </ul>  
-              </div>
-            </li> SCOTT HIDE -->
-          </ul>
-        </div>
-      </div>
-    </nav>
+    </div>
   </div>
+
   <%= @inner_content %>
     <footer class="text-center text-white">
       <div class="grid md:grid-rows-2">
