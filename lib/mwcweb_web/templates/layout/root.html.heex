@@ -17,51 +17,98 @@
 </head>
 
 <body>
-  <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800"
-    style="background-color: rgb(37, 37, 37);">
-    <div x-data="{ open: false }"
-      class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-      <div class="p-4 flex flex-row items-center justify-between">
-        <a href="/">
-          <img class="mr-10 h-7 w-10" src="/images/mwcicon2.png" alt="MWC Logo">
-        </a>
-        <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-            <path x-show="!open" fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-              clip-rule="evenodd"></path>
-            <path x-show="open" fill-rule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </button>
-      </div>
-      <nav :class="{'flex': open, 'hidden': !open}"
-        class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-        <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
-          href="/collection/bottle-shop">Bottle Shop</a>
-        <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
-          href="/collection/wine-futures">Wine Futures</a>
-        <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
-          href="/reservation">Reservation</a>
-        <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
-          href="/membership">Membership</a>
-        <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
-          href="/blogposts">Blog</a>
-      </nav>
-
-      <div class="hidden md:block ml-10 dispaly-end">
-        <div class="flex items-center lg:order-2">
-          <div id="c7-cart"></div>
-          <div>
-            <a href="/profile/login" class="block px-2 py-2 text-sm">
-              <div id="c7-account"></div>
+  <nav x-data="{ open: false }" style="background-color: rgb(37, 37, 37)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <a href="/">
+              <img class="mr-10 h-7 w-10" src="/images/mwcicon2.png" alt="MWC Logo">
             </a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a href="/collection/bottle-shop"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Bottle
+                Shop</a>
+              <a href="/collection/wine-futures"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Wine
+                Futures</a>
+              <a href="/reservation"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reservation</a>
+              <a href="/membership"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Membership</a>
+              <a href="/blogposts"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+            </div>
+          </div>
+        </div>
+        <div class="dispaly flex">
+          <div class="flex items-center lg:order-2">
+            <div id="c7-cart"></div>
+            <div>
+              <a href="/profile/login" class="block px-2 py-2 text-sm" role="menuitem" tabindex="-1"
+                id="user-menu-item-0">
+                <div id="c7-account"></div>
+              </a>
+            </div>
+            <button type="button" aria-label="Search this website" data-bs-toggle="modal" data-bs-target="#searchmodal"
+              title="Search">
+              <svg style="color: rgb(214, 211, 211)" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  fill="white"></path>
+              </svg>
+            </button>
+            <!--Modal-->
+          </div>
+          <div class="md:hidden flex items-center">
+            <button class="outline-none menu-button" @click="open = !open">
+              <svg class="block w-6 h-6 text-gray-500" style="margin-left: 10px" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewBox="0 00 24 24" stroke="currentColor">
+                <path x-show="!open" d="m4 6h16M4 12h16M4 18h16">
+                </path>
+                <path x-show="open" fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div :class="{'flex': open, 'hidden': !open}" class="md:hidden mobile-menu">
+      <div class="menu-header-container px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <ul>
+          <li>
+            <a href="/collection/bottle-shop" class="text-white block px-3 py-2 rounded-md text-base font-medium"
+              aria-current="page">Bottle
+              Shop</a>
+          </li>
+          <li>
+            <a href="/collection/wine-futures" class=" text-white block px-3 py-2 rounded-md text-base font-medium"
+              aria-current="page">Wine
+              Futures</a>
+          </li>
+          <li>
+            <a href="/reservation" class=" text-white block px-3 py-2 rounded-md text-base font-medium"
+              aria-current="page">Reservation</a>
+          </li>
+          <li>
+            <a href="/membership" class=" text-white block px-3 py-2 rounded-md text-base font-medium"
+              aria-current="page">Membership</a>
+          </li>
+          <li>
+            <a href="/blogposts" class=" text-white block px-3 py-2 rounded-md text-base font-medium"
+              aria-current="page">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <%= @inner_content %>
     <footer class="text-center text-white">
