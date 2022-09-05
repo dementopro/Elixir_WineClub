@@ -112,16 +112,16 @@
 
   <%= @inner_content %>
     <footer class="text-center text-white">
-      <div class="grid md:grid-rows-2">
-        <div class="c7-subscribe flex justify-center mt-5 mb-4" data-has-name-field="true"></div>
-        <div class="w-full flex justify-center">
-          <p style="font-size:20px" class="w-3/4">We have a newsletter to stay connected. Sign up and keep up to date on upcoming wine
-          offers, wine tastings and wine dinners. You don&#8217;t want to miss out!</p>
+      <div class="grid md:grid-cols-2">
+        <div class="flex justify-center md:ml-auto items-center text-center w-9/12 mt-4">
+          <p>
+           We have a newsletter to stay connected. Sign up and keep up to date on upcoming wine offers, wine tastings andwine dinners. You don't want to miss out!
+          </p>
         </div>
+        <div class="c7-subscribe flex justify-center mt-2" data-has-name-field="true"></div>
       </div>
-
-      <div class="grid md:grid-cols-3 gird-cols-1 gap-4 flex justify-center">
-          <img class="h-20 w-17 mr-10 md:m-auto md:mb-6" src={Routes.static_path(@conn, "/images/mwc_logo.png" )}
+      <div class="grid md:grid-cols-3 flex justify-center">
+          <img class="h-14 w-18 mr-10 md:m-auto" src={Routes.static_path(@conn, "/images/mwc_logo.png" )}
             alt="Wine Logo" />
 
         <div class="flex justify-center items-center">
