@@ -373,12 +373,6 @@ em{
   font-style: italic;
 }
 
-.c7t-text-block--2col .c7t-template-width>div {
-  width: 49%;
-  padding: 0 1%;
-  margin-left: 0;
-  margin-right: 0;
-}
 /*META-BADGE*/
 
 .c7-badge {
@@ -403,4 +397,10 @@ em{
   max-width: 50px;
   width: 100%;
 }
+
+.c7-product__photo {
+  flex: 0 0 350px;
+}
+
+
 
