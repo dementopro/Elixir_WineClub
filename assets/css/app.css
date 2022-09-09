@@ -27,6 +27,11 @@
     @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg;
   }
 }
+
+body {
+  background-color: black !important;
+  color: white !important;
+}
 /* Alerts and form errors used by phx.new */
 .alert {
   padding: 15px;
@@ -229,6 +234,10 @@ h1, .h1 {
 
   .c7-btn--alt {
     color: #FFFFFF !important;
+  }
+
+  .c7-bg {
+    background-color: black !important;
   }
 
 /*login component*/
