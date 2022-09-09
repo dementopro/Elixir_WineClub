@@ -1,3 +1,4 @@
+<!--
 <div class="container text-and-image">
   <div class="columns is-variable is-mobile is-8">
     <div class="column is-half">
@@ -10,4 +11,22 @@
       </figure>
     </div>
   </div>
+</div>
+-->
+
+<div class="flex flex-col items-center w-full">
+  <h1 class="text-center text-[40px]"> Our Story </h1>
+  <p class="w-2/3 text-center text-[20px]">Modern Wine Club brings a novel approach to the wine industry.
+   We are a direct to consumer wine club leveraging private label wine,
+   the power of group buying and precision wine recommendations to provide a new operating model for the wine industry.
+   Under non-disclosure agreements,
+   we source wine from prestige vineyards and offer it to our members under private wine labels at a steep discount compared to the original brands.
+   Our members rate the wines so that we can provide curated and increasingly precise wine recommendations.
+   We organize pop-up wine tasting events and wine dinners for our members to create a sense of community.</p>
+</div>
+
+<div class="flex flex-col items-center w-full" style="">
+  <h1 class="text-[40px]">  <%= @content.title %> </h1>
+  <p class="w-2/3 text-center text-[20px]"> <%= @content.content %> </p>
+  <img class="w-full"src="<%= @content.image %>" alt="Placeholder image">
 </div>

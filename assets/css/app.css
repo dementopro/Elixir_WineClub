@@ -153,7 +153,7 @@ footer {
 
 h1, .h1 {
   font-size: 36px;
-  font-family: "Inter", sans-serif;
+  font-family: "Baskerville No 2",serif;
   line-height: 1.5; 
   font-weight: 700;
   font-style: normal;
@@ -411,5 +411,11 @@ em{
   text-align: center;
 }
 
+.image_container:hover {
+  /* transition: width 2s, height 4s; */
+  transform: scaleX(1.1);
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
 
 

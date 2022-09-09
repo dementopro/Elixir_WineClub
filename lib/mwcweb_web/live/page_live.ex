@@ -26,9 +26,9 @@ defmodule MwcwebWeb.PageLive do
     Phoenix.View.render(MwcwebWeb.PageView, "text_and_image.html", content: content)
   end
 
-  def render_section(%{features: content}) do
-    Phoenix.View.render(MwcwebWeb.PageView, "features.html", content: content)
-  end
+  # def render_section(%{type: "wine_collection"} = content) do
+  #   Phoenix.View.render(MwcwebWeb.PageView, "collection.html", content: content)
+  # end
 
   def render_section(_), do: ""
 
