@@ -27,8 +27,7 @@ defmodule MwcwebWeb.ShowBlogpostLive do
         |> assign(:page_title, blogpost.title)
         |> assign(:blogpost, blogpost)
         |> put_flash(:error, nil)
-
-      _ ->
+       _ ->
         socket
         |> assign(:page_title, "Blogpost Details")
         |> assign(:blogpost, nil)

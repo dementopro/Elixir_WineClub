@@ -36,15 +36,14 @@
     <figure class="image main-image is-256x256">
         <img src="<%= @blogpost.blogcover_image %>">
       </figure>
-       <!-- RENDER HTML <div class="content"><%= raw(@blogpost.content) %></div> -->
+        RENDER HTML <div class="content"><%= raw(@blogpost.content) %></div>
 
 <section>
-       <!-- RENDER MARKDOWN <div class="content"><%= raw(Earmark.as_html!(@blogpost.content)) %></div> -->
+      <!--  RENDER MARKDOWN <div class="content"><%= raw(Earmark.as_html!(@blogpost.content)) %></div> -->
 
-      <div class="content"><%= raw(Earmark.as_html!(@blogpost.content)) %></div>
+      <!-- <div class="content"><%= raw(Earmark.as_html!(@blogpost.content)) %></div> -->
 
-
-  </section>
+</section>
 </div>
 
   </blogpost>

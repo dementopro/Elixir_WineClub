@@ -415,6 +415,14 @@ em{
   width: 100%;
 }
 
+/*META-INVENTORY-BADGE*/
+.c7-badge--mwc-inventory-count {
+  background: rgb(37, 37, 37);
+  height: 50px;
+  max-width: 50px;
+  width: 100%;
+}
+
 /* IMPLEMENT : BOTTLE SHOP IMAGE LOOKS GOOD */
 .c7-product__photo {
   flex: 0 0 350px;

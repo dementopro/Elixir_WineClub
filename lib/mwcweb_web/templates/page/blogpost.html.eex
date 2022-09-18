@@ -12,10 +12,8 @@
         </p>
       </header>
 
-      <div class="card-content">
+      <div class="card-content"> 
         <div class="content">
-
-
           <h4 class="subtitle is-6 blog-description"><%= raw(Earmark.as_html!(@blogpost.summary)) %></h4>
         </div>
        </div> <%= # end card-content %>
